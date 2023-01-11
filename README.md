@@ -91,6 +91,9 @@ Build The Provided Lab One Code
 	- If the make is successful, the file ```lab1.uf2``` will be created in the build directory.  To execute that file reboot the pico into 
 	drive-loader-mode by booting with the button pressed and copy the ```lab1.uf2``` to the faux drive that the pico creates.
 		- ```cp lab1.uf2 /media/miller/RPI-RP2```
+	- Note that you can easily perform a make and copy in one command line
+		1. Make sure that your pico is rebooted as a USB Drive
+		2. ```$ make && cp lab1.uf2 /media/miller/RPI-RP2``` <sub>(but use the path to **your** pico)</sub>
 		
 ## FreeRTOS and the following is only used for Lab2 and beyond... (*..In yer best Buzz Lightyear voice..*)
 
