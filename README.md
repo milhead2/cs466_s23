@@ -29,18 +29,19 @@ Build Environment Installation Steps
 	- ```export PICO_SDK_PATH=~/src/pico/pico-sdk```  Also add this export to your .bashrc file, (I just append them at the bottom if the file)
 		- ```echo "export PICO_SDK_PATH=~/src/pico/pico-sdk" >> ~/.bashrc```  Be very sure you append with ```>>`` or you can overwrite your bashrc file.
 	- ```cd ~/src```
- - Build the SDK and examples dir.  This may require additional software installs...  The compiler install is below.
-    - ```cd ../pico-examples```
-	- ```git submodule update --init```  
-	- ```cmake .```
-	- ```make```
-    - ```cd ../pico-sdk```
-	- ```git submodule update --init```  
-	- ```cmake .```
-	- ```make```
-	export PICO_SDK_PATH=~/src/pico/pico-sdk
-	
+
  - If you do not have the ARM GCC compiler installed you can get it from here..
+	- Verify that you can see the installed compiler in your path `arm-none-eabi-gcc --version`
+	- If you get a compiler verison 
+		```
+		$ arm-none-eabi-gcc --version
+		arm-none-eabi-gcc (GNU Arm Embedded Toolchain 10.3-2021.10) 10.3.1 20210824 (release)
+		Copyright (C) 2020 Free Software Foundation, Inc.
+		This is free software; see the source for copying conditions.  There is NO
+		warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
+		```
+		Then you can skop the rest of this section.  Otherwise Continue here.
+		
 	- ```cd ~/src```
 	- ```mkdir bin```
 	- ```cd bin```
@@ -61,6 +62,17 @@ Build Environment Installation Steps
 		warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
 		```
 
+- Build the SDK and examples dir.  This may require additional software installs...  The compiler install is below.
+    - ```cd ../pico-examples```
+	- ```git submodule update --init```  
+	- ```cmake .```
+	- ```make```
+    - ```cd ../pico-sdk```
+	- ```git submodule update --init```  
+	- ```cmake .```
+	- ```make```
+	export PICO_SDK_PATH=~/src/pico/pico-sdk
+	
 
 Build The Provided Lab One Code
 ---------------------------
@@ -80,6 +92,7 @@ Build The Provided Lab One Code
 	drive-loader-mode by booting with the button pressed and copy the ```lab1.uf2``` to the faux drive that the pico creates.
 		- ```cp lab1.uf2 /media/miller/RPI-RP2```
 		
+## FreeRTOS and the following is only used fopr Lab2 and beyond... (*..In yer best Buzz Lightyear voice..*)
 
 Add FreeRTOS to directory tree
 ---------------------------
