@@ -92,7 +92,7 @@ Build The Provided Lab One Code
 	drive-loader-mode by booting with the button pressed and copy the ```lab1.uf2``` to the faux drive that the pico creates.
 		- ```cp lab1.uf2 /media/miller/RPI-RP2```
 		
-## FreeRTOS and the following is only used fopr Lab2 and beyond... (*..In yer best Buzz Lightyear voice..*)
+## FreeRTOS and the following is only used for Lab2 and beyond... (*..In yer best Buzz Lightyear voice..*)
 
 Add FreeRTOS to directory tree
 ---------------------------
