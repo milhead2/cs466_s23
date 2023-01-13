@@ -42,7 +42,7 @@ Build Environment Installation Steps
 		```
 		Then you can skop the rest of this section.  Otherwise Continue here.
 		
-	- ```cd ~/src```
+	- ```cd ~/src/pico```
 	- ```mkdir bin```
 	- ```cd bin```
 	- ```wget https://developer.arm.com/-/media/Files/downloads/gnu-rm/10.3-2021.10/gcc-arm-none-eabi-10.3-2021.10-x86_64-linux.tar.bz2```
@@ -71,7 +71,6 @@ Build Environment Installation Steps
 	- ```git submodule update --init```  
 	- ```cmake .```
 	- ```make```
-	export PICO_SDK_PATH=~/src/pico/pico-sdk
 	
 
 Build The Provided Lab One Code
