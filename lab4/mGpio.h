@@ -33,7 +33,7 @@
 #define OLATB    0x15
 
 void    mGpioInit(void);
-void    mGpioWriteByte(uint8_t byte, uint8_t address);
+void    mGpioWriteByte(uint8_t address, uint8_t byte);
 uint8_t mGpioReadByte(uint8_t address);
 
 
