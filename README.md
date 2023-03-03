@@ -1,11 +1,11 @@
 WSU CS 466 README
 =================
-Is intended to help setup the build environment for class so that we all do start from the same environment.
+This is intended to help setup the build environment for class so that we all do start from the same environment.
 
-I locate all my development projects in a directory ```~/src``` Doing so allows me a consistant location scheme on any computer.  In linux the tilde character indicates your home directory.
+I locate all my development projects in a directory ```~/src``` Doing so allows me a consistent location scheme on any computer.  In Linux, the tilde character indicates your home directory.
 
 It's not necessary that you use ```src``` as your parent directory but pick a directory that you treat as src of your own and install our class repo and development tools for class below it.  
-If you experiance issues in lab it will help me isolate where the issue lies.  It 'should' also make all my ```make``` and ```cmake``` files work straight off without modification.
+If you experience issues in lab it will help me isolate where the issue lies.  It 'should' also make all my ```make``` and ```cmake``` files work straight off without modification.
 
 ![Capture](https://user-images.githubusercontent.com/19733331/150585134-7ebbc1ad-c76b-4c19-bdd8-8922a14eacbe.JPG)
 
@@ -40,7 +40,7 @@ Build Environment Installation Steps
 		This is free software; see the source for copying conditions.  There is NO
 		warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
 		```
-		Then you can skop the rest of this section.  Otherwise Continue here.
+		Then you can skip the rest of this section.  Otherwise Continue here.
 		
 	- ```cd ~/src/pico```
 	- ```mkdir bin```
@@ -78,29 +78,29 @@ Build The Provided Lab One Code
 
 - We will using cmake to generate a Makefile 
 
-	- You should have you CS466_S23 repo in a peer directory to the pico tools.  For me that is ```~/src/cs466_s23``` and the pico tools in ```~/src/pico```
+	- You should have your CS466_S23 repo in a peer directory to the pico tools.  For me that is ```~/src/cs466_s23``` and the pico tools in ```~/src/pico```
 	- Create a build directory and make it your current dir
 		- ```cd ~/src/cs466_s23/lab1```
 		- ```mkdir build```
 		- ```cd build```
-	- Call ```cmake``` to generate a makefile
+	- Call ```cmake``` to generate a Makefile
 		- ```cmake ..```
 	- Then use ```make``` to build the SDK and the lab1 code
 		- ```make```
 	- If the make is successful, the file ```lab1.uf2``` will be created in the build directory.  To execute that file reboot the pico into 
 	drive-loader-mode by booting with the button pressed and copy the ```lab1.uf2``` to the faux drive that the pico creates.
-		- ```cp lab1.uf2 /media/miller/RPI-RP2```
+		- ```cp lab1.uf2 /media/username/RPI-RP2```
 	- Note that you can easily perform a make and copy in one command line
 		1. Make sure that your pico is rebooted as a USB Drive
-		2. ```$ make && cp lab1.uf2 /media/miller/RPI-RP2``` <sub>(but use the path to **your** pico)</sub>
+		2. ```$ make && cp lab1.uf2 /media/username/RPI-RP2``` <sub>(but use the path to **your** pico)</sub>
 		
-## FreeRTOS and the following is only used for Lab2 and beyond... (*..In yer best Buzz Lightyear voice..*)
+## FreeRTOS and the following is used only for Lab2 and beyond... (*..In yer best Buzz Lightyear voice..*)
 
 Add FreeRTOS to directory tree
 ---------------------------
 
-- In order to build lab2 and later projects you wiull need to add the latest freertos directory to your dev disk.  
-	- Download the freertos image from www.freertos.org
+- In order to build lab2 and later projects, you will need to add the latest FreeRTOS directory to your dev disk.  
+	- Download the FreeRTOS image from www.freertos.org
 	- set your current directory to your parent dir.
 	- run the command to extract the archive...
 		- ```unzip ~/Downloads/FreeRTOSv202112.00.zip```
@@ -129,8 +129,7 @@ Backup Information (ignore below)
 18286  cd ..
 18291  git clone git@github.com:raspberrypi/pico-sdk.git
 $ cd blink
-$ cp blink.uf2 /media/miller/RPI-RP2
+$ cp blink.uf2 /media/username/RPI-RP2
 
 
 wget https://github.com/FreeRTOS/FreeRTOS-LTS/releases/download/202012.03-LTS/FreeRTOSv202012.03-LTS.zip
-
